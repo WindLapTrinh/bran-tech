@@ -62,42 +62,7 @@ ul.primary-button li a.btn-menu.btn-menu-login.btn-menu-loyalty {
 ul.primary-button li a.btn-menu {
   padding: 10px 31px;
 }
-@media (min-width: 992px) {
-  header.fixed .header-bottom {
-    display: initial;
-  }
-  header.fixed {
-    background: #f4698f !important;
-    padding: 20px;
-  }
-}
-.event_banner_area {
-  background: #f4698f;
-  min-height: 100vh;
-  position: relative;
-  overflow: hidden;
-  background-size: 100% 100% !important;
-  z-index: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  text-align: center;
-}
-.event_banner_area .parallax-effect {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 105%;
-  z-index: -1;
-  opacity: 0.2;
-}
+
 .event_banner_content {
   position: relative;
   text-align: left;

@@ -358,69 +358,69 @@ var loadDistricts = function(provinceSelected){
     });
 }
 
-var loadLocation = function () {
-    var provinceSelected = $('[data-toggle="province"]').val();
+// var loadLocation = function () {
+//     var provinceSelected = $('[data-toggle="province"]').val();
 
-    $.get(CNV.baseUrl + '/api/provinces.json?form&provinceSelected='+provinceSelected, function (data) {
-        $('select[name=province]').html(data);
+//     $.get(CNV.baseUrl + '/api/provinces.json?form&provinceSelected='+provinceSelected, function (data) {
+//         $('select[name=province]').html(data);
 
-        // Load district selected
-        loadDistricts(provinceSelected);
-    });
+//         // Load district selected
+//         loadDistricts(provinceSelected);
+//     });
 
-    $('select[name=province]').change(function(){
-        var val = $(this).val();
-        if (val != '') {
-            $.get(CNV.baseUrl + '/api/districts.json?form&province=' + val , function (data) {
-                $('select[name=district]').html(data);
-            });
-        } else {
-            $('select[name=district]').html('<option value="N/A">Quáº­n/Huyá»‡n</option>');
-            $('select[name=ward]').html('<option value="N/A">PhÆ°á»ng/XĂ£</option>');
-        }
-    });
+//     $('select[name=province]').change(function(){
+//         var val = $(this).val();
+//         if (val != '') {
+//             $.get(CNV.baseUrl + '/api/districts.json?form&province=' + val , function (data) {
+//                 $('select[name=district]').html(data);
+//             });
+//         } else {
+//             $('select[name=district]').html('<option value="N/A">Quáº­n/Huyá»‡n</option>');
+//             $('select[name=ward]').html('<option value="N/A">PhÆ°á»ng/XĂ£</option>');
+//         }
+//     });
 
-    $('select[name=district]').change(function(){
-        var val = $(this).val();
-        if (val != '') {
-            $.get(CNV.baseUrl + '/api/wards.json?form&district=' + val , function (data) {
-                $('select[name=ward]').html(data);
-            });
-        } else {
-            $('select[name=ward]').html('<option value="N/A">PhÆ°á»ng/XĂ£</option>');
-        }
-    });
-}
+//     $('select[name=district]').change(function(){
+//         var val = $(this).val();
+//         if (val != '') {
+//             $.get(CNV.baseUrl + '/api/wards.json?form&district=' + val , function (data) {
+//                 $('select[name=ward]').html(data);
+//             });
+//         } else {
+//             $('select[name=ward]').html('<option value="N/A">PhÆ°á»ng/XĂ£</option>');
+//         }
+//     });
+// }
 
-var loadLocationShipping = function () {
-    $.get(CNV.baseUrl + '/api/provinces.json?form', function (data) {
-        $('select[name=shipping_province]').html(data);
+// var loadLocationShipping = function () {
+//     $.get(CNV.baseUrl + '/api/provinces.json?form', function (data) {
+//         $('select[name=shipping_province]').html(data);
 
-    });
+//     });
 
-    $('select[name=shipping_province]').change(function(){
-        var val = $(this).val();
-        if (val != '') {
-            $.get(CNV.baseUrl + '/api/districts.json?form&province=' + val , function (data) {
-                $('select[name=shipping_district]').html(data);
-            });
-        } else {
-            $('select[name=shipping_district]').html('<option value="N/A">Quáº­n/Huyá»‡n</option>');
-            $('select[name=shipping_ward]').html('<option value="N/A">PhÆ°á»ng/XĂ£</option>');
-        }
-    });
+//     $('select[name=shipping_province]').change(function(){
+//         var val = $(this).val();
+//         if (val != '') {
+//             $.get(CNV.baseUrl + '/api/districts.json?form&province=' + val , function (data) {
+//                 $('select[name=shipping_district]').html(data);
+//             });
+//         } else {
+//             $('select[name=shipping_district]').html('<option value="N/A">Quáº­n/Huyá»‡n</option>');
+//             $('select[name=shipping_ward]').html('<option value="N/A">PhÆ°á»ng/XĂ£</option>');
+//         }
+//     });
 
-    $('select[name=shipping_district]').change(function(){
-        var val = $(this).val();
-        if (val != '') {
-            $.get(CNV.baseUrl + '/api/wards.json?form&district=' + val , function (data) {
-                $('select[name=shipping_ward]').html(data);
-            });
-        } else {
-            $('select[name=shipping_ward]').html('<option value="N/A">PhÆ°á»ng/XĂ£</option>');
-        }
-    });
-}
+//     $('select[name=shipping_district]').change(function(){
+//         var val = $(this).val();
+//         if (val != '') {
+//             $.get(CNV.baseUrl + '/api/wards.json?form&district=' + val , function (data) {
+//                 $('select[name=shipping_ward]').html(data);
+//             });
+//         } else {
+//             $('select[name=shipping_ward]').html('<option value="N/A">PhÆ°á»ng/XĂ£</option>');
+//         }
+//     });
+// }
 
 
 var slugify = function(str) {
@@ -448,10 +448,10 @@ var number_format = function(money, currency){
     }) + ' ' + currency;
 };
 
-$(document).ready(function() {
-    loadLocation();
-    loadLocationShipping();
-});
+// $(document).ready(function() {
+//     loadLocation();
+//     loadLocationShipping();
+// });
 
 var toggleThisElement = function(element) {
     $(element).toggle();
